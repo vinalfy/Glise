@@ -31,10 +31,23 @@
         body {
             font-family: 'Space Grotesk', sans-serif;
             background: linear-gradient(135deg, var(--cosmic-black) 0%, var(--deep-space) 30%, var(--nebula-purple) 70%, var(--cosmic-black) 100%);
+            background-attachment: fixed;
             color: var(--text-primary);
             overflow-x: hidden;
             min-height: 100vh;
             position: relative;
+        }
+
+        /* Fix for mobile background */
+        @media (max-width: 768px) {
+            body {
+                background: var(--cosmic-black);
+                background-image: 
+                    radial-gradient(ellipse at 20% 50%, var(--deep-space) 0%, transparent 50%),
+                    radial-gradient(ellipse at 80% 20%, var(--nebula-purple) 0%, transparent 50%),
+                    radial-gradient(ellipse at 40% 80%, var(--deep-space) 0%, transparent 50%);
+                background-attachment: scroll;
+            }
         }
 
         /* Navigation Styles */
@@ -309,11 +322,11 @@
             margin-bottom: 15px;
         }
 
-        /* Enhanced Explore Page Styles with Larger Orbits */
+        /* Enhanced Explore Page Styles with Better Mobile Orbits */
         .solar-system-container {
             position: relative;
             width: 100%;
-            height: clamp(600px, 100vw, 900px);
+            height: clamp(500px, 80vw, 900px);
             margin: 60px 0;
             display: flex;
             justify-content: center;
@@ -334,8 +347,8 @@
 
         .solar-system {
             position: relative;
-            width: min(800px, 95vw);
-            height: min(800px, 95vw);
+            width: min(90vw, 800px);
+            height: min(90vw, 800px);
         }
 
         /* Enhanced Sun */
@@ -343,8 +356,8 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: clamp(50px, 10vw, 80px);
-            height: clamp(50px, 10vw, 80px);
+            width: clamp(40px, 8vw, 80px);
+            height: clamp(40px, 8vw, 80px);
             transform: translate(-50%, -50%);
             border-radius: 50%;
             z-index: 10;
@@ -383,7 +396,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            border: 2px solid rgba(255, 215, 0, 0.4);
+            border: 2px solid rgba(255, 215, 0, 0.5);
             border-radius: 50%;
             transform: translate(-50%, -50%);
             border-style: dotted;
@@ -421,38 +434,38 @@
             box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
         }
 
-        /* Enhanced Planet orbit definitions with larger sizes */
+        /* Enhanced Planet orbit definitions - Desktop */
         .mercury-orbit { 
-            width: clamp(120px, 20vw, 160px); 
-            height: clamp(120px, 20vw, 160px); 
+            width: clamp(100px, 20vw, 160px); 
+            height: clamp(100px, 20vw, 160px); 
         }
         .venus-orbit { 
-            width: clamp(160px, 27vw, 210px); 
-            height: clamp(160px, 27vw, 210px); 
+            width: clamp(130px, 25vw, 210px); 
+            height: clamp(130px, 25vw, 210px); 
         }
         .earth-orbit { 
-            width: clamp(200px, 34vw, 260px); 
-            height: clamp(200px, 34vw, 260px); 
+            width: clamp(160px, 30vw, 260px); 
+            height: clamp(160px, 30vw, 260px); 
         }
         .mars-orbit { 
-            width: clamp(240px, 41vw, 310px); 
-            height: clamp(240px, 41vw, 310px); 
+            width: clamp(190px, 35vw, 310px); 
+            height: clamp(190px, 35vw, 310px); 
         }
         .jupiter-orbit { 
-            width: clamp(320px, 54vw, 420px); 
-            height: clamp(320px, 54vw, 420px); 
+            width: clamp(240px, 45vw, 420px); 
+            height: clamp(240px, 45vw, 420px); 
         }
         .saturn-orbit { 
-            width: clamp(400px, 67vw, 520px); 
-            height: clamp(400px, 67vw, 520px); 
+            width: clamp(300px, 55vw, 520px); 
+            height: clamp(300px, 55vw, 520px); 
         }
         .uranus-orbit { 
-            width: clamp(480px, 80vw, 620px); 
-            height: clamp(480px, 80vw, 620px); 
+            width: clamp(360px, 65vw, 620px); 
+            height: clamp(360px, 65vw, 620px); 
         }
         .neptune-orbit { 
-            width: clamp(560px, 93vw, 720px); 
-            height: clamp(560px, 93vw, 720px); 
+            width: clamp(420px, 75vw, 720px); 
+            height: clamp(420px, 75vw, 720px); 
         }
 
         /* Animation for orbit containers */
@@ -467,59 +480,59 @@
 
         /* Enhanced Planet size definitions */
         .mercury {
-            width: clamp(8px, 1.8vw, 12px);
-            height: clamp(8px, 1.8vw, 12px);
-            top: calc(-1 * clamp(60px, 10vw, 80px));
-            left: calc(-1 * clamp(4px, 0.9vw, 6px));
+            width: clamp(6px, 1.5vw, 12px);
+            height: clamp(6px, 1.5vw, 12px);
+            top: calc(-1 * clamp(50px, 10vw, 80px));
+            left: calc(-1 * clamp(3px, 0.75vw, 6px));
         }
 
         .venus {
-            width: clamp(10px, 2.2vw, 16px);
-            height: clamp(10px, 2.2vw, 16px);
-            top: calc(-1 * clamp(80px, 13.5vw, 105px));
-            left: calc(-1 * clamp(5px, 1.1vw, 8px));
+            width: clamp(8px, 1.8vw, 16px);
+            height: clamp(8px, 1.8vw, 16px);
+            top: calc(-1 * clamp(65px, 12.5vw, 105px));
+            left: calc(-1 * clamp(4px, 0.9vw, 8px));
         }
 
         .earth {
-            width: clamp(12px, 2.6vw, 18px);
-            height: clamp(12px, 2.6vw, 18px);
-            top: calc(-1 * clamp(100px, 17vw, 130px));
-            left: calc(-1 * clamp(6px, 1.3vw, 9px));
+            width: clamp(9px, 2vw, 18px);
+            height: clamp(9px, 2vw, 18px);
+            top: calc(-1 * clamp(80px, 15vw, 130px));
+            left: calc(-1 * clamp(4.5px, 1vw, 9px));
         }
 
         .mars {
-            width: clamp(9px, 2vw, 14px);
-            height: clamp(9px, 2vw, 14px);
-            top: calc(-1 * clamp(120px, 20.5vw, 155px));
-            left: calc(-1 * clamp(4.5px, 1vw, 7px));
+            width: clamp(7px, 1.6vw, 14px);
+            height: clamp(7px, 1.6vw, 14px);
+            top: calc(-1 * clamp(95px, 17.5vw, 155px));
+            left: calc(-1 * clamp(3.5px, 0.8vw, 7px));
         }
 
         .jupiter {
-            width: clamp(28px, 6vw, 45px);
-            height: clamp(28px, 6vw, 45px);
-            top: calc(-1 * clamp(160px, 27vw, 210px));
-            left: calc(-1 * clamp(14px, 3vw, 22.5px));
+            width: clamp(20px, 4.5vw, 45px);
+            height: clamp(20px, 4.5vw, 45px);
+            top: calc(-1 * clamp(120px, 22.5vw, 210px));
+            left: calc(-1 * clamp(10px, 2.25vw, 22.5px));
         }
 
         .saturn {
-            width: clamp(24px, 5.2vw, 38px);
-            height: clamp(24px, 5.2vw, 38px);
-            top: calc(-1 * clamp(200px, 33.5vw, 260px));
-            left: calc(-1 * clamp(12px, 2.6vw, 19px));
+            width: clamp(18px, 4vw, 38px);
+            height: clamp(18px, 4vw, 38px);
+            top: calc(-1 * clamp(150px, 27.5vw, 260px));
+            left: calc(-1 * clamp(9px, 2vw, 19px));
         }
 
         .uranus {
-            width: clamp(18px, 4vw, 28px);
-            height: clamp(18px, 4vw, 28px);
-            top: calc(-1 * clamp(240px, 40vw, 310px));
-            left: calc(-1 * clamp(9px, 2vw, 14px));
+            width: clamp(14px, 3vw, 28px);
+            height: clamp(14px, 3vw, 28px);
+            top: calc(-1 * clamp(180px, 32.5vw, 310px));
+            left: calc(-1 * clamp(7px, 1.5vw, 14px));
         }
 
         .neptune {
-            width: clamp(17px, 3.8vw, 26px);
-            height: clamp(17px, 3.8vw, 26px);
-            top: calc(-1 * clamp(280px, 46.5vw, 360px));
-            left: calc(-1 * clamp(8.5px, 1.9vw, 13px));
+            width: clamp(13px, 2.8vw, 26px);
+            height: clamp(13px, 2.8vw, 26px);
+            top: calc(-1 * clamp(210px, 37.5vw, 360px));
+            left: calc(-1 * clamp(6.5px, 1.4vw, 13px));
         }
 
         @keyframes orbit-mercury { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
@@ -1106,61 +1119,125 @@
                 gap: 10px;
             }
 
-            /* Mobile specific orbit adjustments */
+            /* Enhanced mobile orbit visibility */
             .solar-system-container {
                 height: clamp(400px, 80vw, 600px);
+                margin: 40px 0;
             }
 
             .solar-system {
-                width: min(380px, 95vw);
-                height: min(380px, 95vw);
+                width: min(85vw, 400px);
+                height: min(85vw, 400px);
             }
 
             .orbit {
-                border-width: 1px;
+                border-width: 2px;
+                border-color: rgba(255, 215, 0, 0.7);
             }
 
-            /* Smaller but still visible orbit rings on mobile */
+            /* Mobile orbit sizes - more visible */
             .mercury-orbit { 
-                width: clamp(80px, 15vw, 120px); 
-                height: clamp(80px, 15vw, 120px); 
+                width: clamp(70px, 18vw, 100px); 
+                height: clamp(70px, 18vw, 100px); 
             }
             .venus-orbit { 
-                width: clamp(100px, 19vw, 150px); 
-                height: clamp(100px, 19vw, 150px); 
+                width: clamp(90px, 22vw, 130px); 
+                height: clamp(90px, 22vw, 130px); 
             }
             .earth-orbit { 
-                width: clamp(120px, 23vw, 180px); 
-                height: clamp(120px, 23vw, 180px); 
+                width: clamp(110px, 26vw, 160px); 
+                height: clamp(110px, 26vw, 160px); 
             }
             .mars-orbit { 
-                width: clamp(140px, 27vw, 210px); 
-                height: clamp(140px, 27vw, 210px); 
+                width: clamp(130px, 30vw, 190px); 
+                height: clamp(130px, 30vw, 190px); 
             }
             .jupiter-orbit { 
-                width: clamp(170px, 33vw, 250px); 
-                height: clamp(170px, 33vw, 250px); 
+                width: clamp(160px, 38vw, 240px); 
+                height: clamp(160px, 38vw, 240px); 
             }
             .saturn-orbit { 
-                width: clamp(200px, 38vw, 290px); 
-                height: clamp(200px, 38vw, 290px); 
+                width: clamp(190px, 45vw, 280px); 
+                height: clamp(190px, 45vw, 280px); 
             }
             .uranus-orbit { 
-                width: clamp(230px, 44vw, 330px); 
-                height: clamp(230px, 44vw, 330px); 
+                width: clamp(220px, 52vw, 320px); 
+                height: clamp(220px, 52vw, 320px); 
             }
             .neptune-orbit { 
-                width: clamp(260px, 50vw, 370px); 
-                height: clamp(260px, 50vw, 370px); 
+                width: clamp(250px, 60vw, 360px); 
+                height: clamp(250px, 60vw, 360px); 
             }
 
             .sun {
-                width: clamp(30px, 8vw, 50px);
-                height: clamp(30px, 8vw, 50px);
+                width: clamp(25px, 6vw, 40px);
+                height: clamp(25px, 6vw, 40px);
+            }
+
+            /* Mobile planet sizes - more visible */
+            .mercury {
+                width: clamp(4px, 1.2vw, 8px);
+                height: clamp(4px, 1.2vw, 8px);
+                top: calc(-1 * clamp(35px, 9vw, 50px));
+                left: calc(-1 * clamp(2px, 0.6vw, 4px));
+            }
+
+            .venus {
+                width: clamp(5px, 1.4vw, 10px);
+                height: clamp(5px, 1.4vw, 10px);
+                top: calc(-1 * clamp(45px, 11vw, 65px));
+                left: calc(-1 * clamp(2.5px, 0.7vw, 5px));
+            }
+
+            .earth {
+                width: clamp(6px, 1.6vw, 12px);
+                height: clamp(6px, 1.6vw, 12px);
+                top: calc(-1 * clamp(55px, 13vw, 80px));
+                left: calc(-1 * clamp(3px, 0.8vw, 6px));
+            }
+
+            .mars {
+                width: clamp(5px, 1.3vw, 10px);
+                height: clamp(5px, 1.3vw, 10px);
+                top: calc(-1 * clamp(65px, 15vw, 95px));
+                left: calc(-1 * clamp(2.5px, 0.65vw, 5px));
+            }
+
+            .jupiter {
+                width: clamp(12px, 3vw, 20px);
+                height: clamp(12px, 3vw, 20px);
+                top: calc(-1 * clamp(80px, 19vw, 120px));
+                left: calc(-1 * clamp(6px, 1.5vw, 10px));
+            }
+
+            .saturn {
+                width: clamp(10px, 2.5vw, 18px);
+                height: clamp(10px, 2.5vw, 18px);
+                top: calc(-1 * clamp(95px, 22.5vw, 140px));
+                left: calc(-1 * clamp(5px, 1.25vw, 9px));
+            }
+
+            .uranus {
+                width: clamp(8px, 2vw, 14px);
+                height: clamp(8px, 2vw, 14px);
+                top: calc(-1 * clamp(110px, 26vw, 160px));
+                left: calc(-1 * clamp(4px, 1vw, 7px));
+            }
+
+            .neptune {
+                width: clamp(7px, 1.8vw, 13px);
+                height: clamp(7px, 1.8vw, 13px);
+                top: calc(-1 * clamp(125px, 30vw, 180px));
+                left: calc(-1 * clamp(3.5px, 0.9vw, 6.5px));
             }
 
             .planet:hover {
                 transform: scale(2);
+            }
+
+            /* Better mobile background */
+            .hero-content h1 {
+                letter-spacing: 2px;
             }
         }
 
@@ -1168,36 +1245,57 @@
         @media (max-width: 480px) {
             .solar-system-container {
                 height: clamp(300px, 70vw, 400px);
-                margin: 40px 0;
+                margin: 30px 0;
             }
 
             .solar-system {
-                width: min(280px, 90vw);
-                height: min(280px, 90vw);
+                width: min(80vw, 300px);
+                height: min(80vw, 300px);
             }
 
-            .mercury-orbit { width: 60px; height: 60px; }
-            .venus-orbit { width: 75px; height: 75px; }
-            .earth-orbit { width: 90px; height: 90px; }
-            .mars-orbit { width: 105px; height: 105px; }
-            .jupiter-orbit { width: 125px; height: 125px; }
-            .saturn-orbit { width: 145px; height: 145px; }
-            .uranus-orbit { width: 165px; height: 165px; }
-            .neptune-orbit { width: 185px; height: 185px; }
+            .orbit {
+                border-width: 1px;
+                border-color: rgba(255, 215, 0, 0.8);
+            }
+
+            .mercury-orbit { width: 50px; height: 50px; }
+            .venus-orbit { width: 65px; height: 65px; }
+            .earth-orbit { width: 80px; height: 80px; }
+            .mars-orbit { width: 95px; height: 95px; }
+            .jupiter-orbit { width: 115px; height: 115px; }
+            .saturn-orbit { width: 135px; height: 135px; }
+            .uranus-orbit { width: 155px; height: 155px; }
+            .neptune-orbit { width: 175px; height: 175px; }
 
             .sun {
-                width: 25px;
-                height: 25px;
+                width: 20px;
+                height: 20px;
             }
 
-            .mercury { width: 4px; height: 4px; top: -30px; left: -2px; }
-            .venus { width: 5px; height: 5px; top: -37.5px; left: -2.5px; }
-            .earth { width: 6px; height: 6px; top: -45px; left: -3px; }
-            .mars { width: 5px; height: 5px; top: -52.5px; left: -2.5px; }
-            .jupiter { width: 12px; height: 12px; top: -62.5px; left: -6px; }
-            .saturn { width: 10px; height: 10px; top: -72.5px; left: -5px; }
-            .uranus { width: 8px; height: 8px; top: -82.5px; left: -4px; }
-            .neptune { width: 7px; height: 7px; top: -92.5px; left: -3.5px; }
+            .mercury { width: 3px; height: 3px; top: -25px; left: -1.5px; }
+            .venus { width: 4px; height: 4px; top: -32.5px; left: -2px; }
+            .earth { width: 5px; height: 5px; top: -40px; left: -2.5px; }
+            .mars { width: 4px; height: 4px; top: -47.5px; left: -2px; }
+            .jupiter { width: 8px; height: 8px; top: -57.5px; left: -4px; }
+            .saturn { width: 7px; height: 7px; top: -67.5px; left: -3.5px; }
+            .uranus { width: 6px; height: 6px; top: -77.5px; left: -3px; }
+            .neptune { width: 5px; height: 5px; top: -87.5px; left: -2.5px; }
+
+            .planet-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .planet-card-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .planet-visual {
+                width: 60px;
+                height: 60px;
+            }
         }
 
         /* Loading Animation */
@@ -1242,6 +1340,23 @@
             
             .section-header p {
                 font-size: clamp(0.9rem, 2vw, 1.1rem);
+            }
+        }
+
+        /* Enhanced mobile touch interactions */
+        @media (hover: none) and (pointer: coarse) {
+            .planet-card:hover .planet-description,
+            .planet-card:hover .explore-btn {
+                opacity: 1;
+                max-height: 200px;
+                transform: translateY(0);
+            }
+            
+            .planet-card .planet-description,
+            .planet-card .explore-btn {
+                opacity: 1;
+                max-height: 200px;
+                transform: translateY(0);
             }
         }
     </style>
@@ -1309,14 +1424,14 @@
                 <div class="solar-system">
                     <!-- Sun with image -->
                     <div class="sun" data-body="sun" onclick="showPlanetDetail('sun')">
-                        <img src="sun.jpg" alt="Sun">
+                        <img src="https://i.pinimg.com/1200x/b2/81/f8/b281f895a8662b074f1866f3e0320dba.jpg" alt="Sun">
                     </div>
                     
                     <!-- Mercury -->
                     <div class="orbit mercury-orbit"></div>
                     <div class="planet-container mercury-container">
                         <div class="planet mercury" data-body="mercury" onclick="showPlanetDetail('mercury')">
-                            <img src="mercury.jpg" alt="Mercury">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="Mercury">
                         </div>
                     </div>
                     
@@ -1324,7 +1439,7 @@
                     <div class="orbit venus-orbit"></div>
                     <div class="planet-container venus-container">
                         <div class="planet venus" data-body="venus" onclick="showPlanetDetail('venus')">
-                            <img src="venus.jpg" alt="Venus">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg" alt="Venus">
                         </div>
                     </div>
                     
@@ -1332,7 +1447,7 @@
                     <div class="orbit earth-orbit"></div>
                     <div class="planet-container earth-container">
                         <div class="planet earth" data-body="earth" onclick="showPlanetDetail('earth')">
-                            <img src="earth.jpg" alt="Earth">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Earth_Eastern_Hemisphere.jpg" alt="Earth">
                         </div>
                     </div>
                     
@@ -1340,7 +1455,7 @@
                     <div class="orbit mars-orbit"></div>
                     <div class="planet-container mars-container">
                         <div class="planet mars" data-body="mars" onclick="showPlanetDetail('mars')">
-                            <img src="mars.jpg" alt="Mars">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Mars">
                         </div>
                     </div>
                     
@@ -1348,7 +1463,7 @@
                     <div class="orbit jupiter-orbit"></div>
                     <div class="planet-container jupiter-container">
                         <div class="planet jupiter" data-body="jupiter" onclick="showPlanetDetail('jupiter')">
-                            <img src="jupiter.jpg" alt="Jupiter">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg" alt="Jupiter">
                         </div>
                     </div>
                     
@@ -1356,7 +1471,7 @@
                     <div class="orbit saturn-orbit"></div>
                     <div class="planet-container saturn-container">
                         <div class="planet saturn" data-body="saturn" onclick="showPlanetDetail('saturn')">
-                            <img src="saturn.jpg" alt="Saturn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturn">
                         </div>
                     </div>
                     
@@ -1364,7 +1479,7 @@
                     <div class="orbit uranus-orbit"></div>
                     <div class="planet-container uranus-container">
                         <div class="planet uranus" data-body="uranus" onclick="showPlanetDetail('uranus')">
-                            <img src="uranus.jpg" alt="Uranus">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Uranus">
                         </div>
                     </div>
                     
@@ -1372,7 +1487,7 @@
                     <div class="orbit neptune-orbit"></div>
                     <div class="planet-container neptune-container">
                         <div class="planet neptune" data-body="neptune" onclick="showPlanetDetail('neptune')">
-                            <img src="neptune.jpg" alt="Neptune">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" alt="Neptune">
                         </div>
                     </div>
                 </div>
@@ -1446,28 +1561,28 @@
             <div class="team-grid page-transition">
                 <div class="team-member">
                     <div class="avatar">
-                        <img src="akbar.jpg" alt="Akbar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Akbar">
                     </div>
                     <div class="member-name">AKBAR</div>
                     <a href="https://www.instagram.com/900_ngh/?igsh=MTN0eHM0a215OTU1YQ%3D%3D#" class="instagram-handle" target="_blank">@900_ngh</a>
                 </div>
                 <div class="team-member">
                     <div class="avatar">
-                        <img src="raffa.jpg" alt="Raffa">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Raffa">
                     </div>
                     <div class="member-name">RAFFA</div>
                     <a href="https://www.instagram.com/raaoa.s?igsh=NDRoMWh2dHZiYTR3" class="instagram-handle" target="_blank">@raaoa.s</a>
                 </div>
                 <div class="team-member">
                     <div class="avatar">
-                        <img src="zaro.jpg" alt="Raditya">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Raditya">
                     </div>
                     <div class="member-name">RADITYA</div>
                     <a href="https://www.instagram.com/mahesahny?igsh=MThkM2drZHU2dzdlaw==" class="instagram-handle" target="_blank">@mahesahny</a>
                 </div>
                 <div class="team-member">
                     <div class="avatar">
-                        <img src="vino.jpg" alt="Vino">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vino">
                     </div>
                     <div class="member-name">VINO</div>
                     <a href="https://www.instagram.com/macsawaa?igsh=MWsyaTRhejZpb3Q0cA%3D%3D&utm" class="instagram-handle" target="_blank">@macsawaa</a>
@@ -1519,7 +1634,7 @@
             mercury: {
                 name: "Merkurius",
                 classification: "Planet Terestrial Berbatu",
-                image: "mercury.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg",
                 stats: {
                     "57.9 juta km": "Jarak dari Matahari",
                     "4,879 km": "Diameter",
@@ -1533,7 +1648,7 @@
             venus: {
                 name: "Venus",
                 classification: "Planet Terestrial Berbatu",
-                image: "venus.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg",
                 stats: {
                     "108.2 juta km": "Jarak dari Matahari",
                     "12,104 km": "Diameter",
@@ -1547,7 +1662,7 @@
             earth: {
                 name: "Bumi",
                 classification: "Planet Terestrial (Dapat Dihuni)",
-                image: "earth.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Earth_Eastern_Hemisphere.jpg",
                 stats: {
                     "149.6 juta km": "Jarak dari Matahari",
                     "12,756 km": "Diameter",
@@ -1561,7 +1676,7 @@
             mars: {
                 name: "Mars",
                 classification: "Planet Terestrial Berbatu",
-                image: "mars.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg",
                 stats: {
                     "227.9 juta km": "Jarak dari Matahari",
                     "6,792 km": "Diameter",
@@ -1575,7 +1690,7 @@
             jupiter: {
                 name: "Jupiter",
                 classification: "Planet Gas Raksasa",
-                image: "jupiter.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg",
                 stats: {
                     "778.5 juta km": "Jarak dari Matahari",
                     "142,984 km": "Diameter",
@@ -1589,7 +1704,7 @@
             saturn: {
                 name: "Saturnus",
                 classification: "Planet Gas Raksasa",
-                image: "saturn.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg",
                 stats: {
                     "1.43 miliar km": "Jarak dari Matahari",
                     "120,536 km": "Diameter",
@@ -1603,7 +1718,7 @@
             uranus: {
                 name: "Uranus",
                 classification: "Planet Es Raksasa",
-                image: "uranus.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg",
                 stats: {
                     "2.87 miliar km": "Jarak dari Matahari",
                     "51,118 km": "Diameter",
@@ -1617,7 +1732,7 @@
             neptune: {
                 name: "Neptunus",
                 classification: "Planet Es Raksasa",
-                image: "neptune.jpg",
+                image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg",
                 stats: {
                     "4.50 miliar km": "Jarak dari Matahari",
                     "49,528 km": "Diameter",
@@ -1951,9 +2066,37 @@
             // Initial scroll reveal check
             revealOnScroll();
 
-            console.log('GLISE System Enhanced - Initialized successfully!');
-            console.log('Features: Larger orbits, Enhanced mobile optimization, Interactive solar system');
-            console.log('Improvements: Better visibility on mobile, Responsive scaling, Optimized animations');
+            // Prevent zoom on double tap for mobile
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function (event) {
+                const now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+
+            console.log('GLISE System Enhanced - Mobile Optimized Initialized!');
+            console.log('✓ Fixed mobile background issues');
+            console.log('✓ Enhanced planet orbit visibility on mobile');
+            console.log('✓ Improved responsive scaling');
+            console.log('✓ Better touch interactions');
+        });
+
+        // Prevent iOS safari bounce effect
+        document.addEventListener('touchmove', function(e) {
+            if (e.target.closest('.modal-content')) {
+                return;
+            }
+            e.preventDefault();
+        }, { passive: false });
+
+        // Handle orientation changes
+        window.addEventListener('orientationchange', function() {
+            setTimeout(() => {
+                // Recalculate sizes after orientation change
+                const starfield = new InteractiveStarfield();
+            }, 500);
         });
     </script>
 </body>
