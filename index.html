@@ -478,61 +478,69 @@
         .uranus-container { animation: orbit-uranus 100s linear infinite; }
         .neptune-container { animation: orbit-neptune 115s linear infinite; }
 
-        /* Enhanced Planet size definitions */
+        /* Enhanced Planet size definitions - Properly aligned on orbit paths */
         .mercury {
             width: clamp(6px, 1.5vw, 12px);
             height: clamp(6px, 1.5vw, 12px);
-            top: calc(-1 * clamp(50px, 10vw, 80px));
-            left: calc(-1 * clamp(3px, 0.75vw, 6px));
+            top: calc(-50% - clamp(3px, 0.75vw, 6px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(50px, 10vw, 80px));
         }
 
         .venus {
             width: clamp(8px, 1.8vw, 16px);
             height: clamp(8px, 1.8vw, 16px);
-            top: calc(-1 * clamp(65px, 12.5vw, 105px));
-            left: calc(-1 * clamp(4px, 0.9vw, 8px));
+            top: calc(-50% - clamp(4px, 0.9vw, 8px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(65px, 12.5vw, 105px));
         }
 
         .earth {
             width: clamp(9px, 2vw, 18px);
             height: clamp(9px, 2vw, 18px);
-            top: calc(-1 * clamp(80px, 15vw, 130px));
-            left: calc(-1 * clamp(4.5px, 1vw, 9px));
+            top: calc(-50% - clamp(4.5px, 1vw, 9px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(80px, 15vw, 130px));
         }
 
         .mars {
             width: clamp(7px, 1.6vw, 14px);
             height: clamp(7px, 1.6vw, 14px);
-            top: calc(-1 * clamp(95px, 17.5vw, 155px));
-            left: calc(-1 * clamp(3.5px, 0.8vw, 7px));
+            top: calc(-50% - clamp(3.5px, 0.8vw, 7px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(95px, 17.5vw, 155px));
         }
 
         .jupiter {
             width: clamp(20px, 4.5vw, 45px);
             height: clamp(20px, 4.5vw, 45px);
-            top: calc(-1 * clamp(120px, 22.5vw, 210px));
-            left: calc(-1 * clamp(10px, 2.25vw, 22.5px));
+            top: calc(-50% - clamp(10px, 2.25vw, 22.5px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(120px, 22.5vw, 210px));
         }
 
         .saturn {
             width: clamp(18px, 4vw, 38px);
             height: clamp(18px, 4vw, 38px);
-            top: calc(-1 * clamp(150px, 27.5vw, 260px));
-            left: calc(-1 * clamp(9px, 2vw, 19px));
+            top: calc(-50% - clamp(9px, 2vw, 19px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(150px, 27.5vw, 260px));
         }
 
         .uranus {
             width: clamp(14px, 3vw, 28px);
             height: clamp(14px, 3vw, 28px);
-            top: calc(-1 * clamp(180px, 32.5vw, 310px));
-            left: calc(-1 * clamp(7px, 1.5vw, 14px));
+            top: calc(-50% - clamp(7px, 1.5vw, 14px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(180px, 32.5vw, 310px));
         }
 
         .neptune {
             width: clamp(13px, 2.8vw, 26px);
             height: clamp(13px, 2.8vw, 26px);
-            top: calc(-1 * clamp(210px, 37.5vw, 360px));
-            left: calc(-1 * clamp(6.5px, 1.4vw, 13px));
+            top: calc(-50% - clamp(6.5px, 1.4vw, 13px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(210px, 37.5vw, 360px));
         }
 
         @keyframes orbit-mercury { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
@@ -1174,61 +1182,69 @@
                 height: clamp(25px, 6vw, 40px);
             }
 
-            /* Mobile planet sizes - more visible */
+            /* Mobile planet sizes - properly aligned on orbit paths */
             .mercury {
                 width: clamp(4px, 1.2vw, 8px);
                 height: clamp(4px, 1.2vw, 8px);
-                top: calc(-1 * clamp(35px, 9vw, 50px));
-                left: calc(-1 * clamp(2px, 0.6vw, 4px));
+                top: calc(-50% - clamp(2px, 0.6vw, 4px));
+                left: calc(-50%);
+                margin-top: calc(-1 * clamp(35px, 9vw, 50px));
             }
 
             .venus {
                 width: clamp(5px, 1.4vw, 10px);
                 height: clamp(5px, 1.4vw, 10px);
-                top: calc(-1 * clamp(45px, 11vw, 65px));
-                left: calc(-1 * clamp(2.5px, 0.7vw, 5px));
+                top: calc(-50% - clamp(2.5px, 0.7vw, 5px));
+                left: calc(-50%);
+                margin-top: calc(-1 * clamp(45px, 11vw, 65px));
             }
 
             .earth {
                 width: clamp(6px, 1.6vw, 12px);
                 height: clamp(6px, 1.6vw, 12px);
-                top: calc(-1 * clamp(55px, 13vw, 80px));
-                left: calc(-1 * clamp(3px, 0.8vw, 6px));
+                top: calc(-50% - clamp(3px, 0.8vw, 6px));
+                left: calc(-50%);
+                margin-top: calc(-1 * clamp(55px, 13vw, 80px));
             }
 
             .mars {
                 width: clamp(5px, 1.3vw, 10px);
                 height: clamp(5px, 1.3vw, 10px);
-                top: calc(-1 * clamp(65px, 15vw, 95px));
-                left: calc(-1 * clamp(2.5px, 0.65vw, 5px));
+                top: calc(-50% - clamp(2.5px, 0.65vw, 5px));
+                left: calc(-50%);
+                margin-top: calc(-1 * clamp(65px, 15vw, 95px));
             }
 
             .jupiter {
                 width: clamp(12px, 3vw, 20px);
                 height: clamp(12px, 3vw, 20px);
-                top: calc(-1 * clamp(80px, 19vw, 120px));
-                left: calc(-1 * clamp(6px, 1.5vw, 10px));
+                top: calc(-50% - clamp(6px, 1.5vw, 10px));
+                left: calc(-50%);
+                margin-top: calc(-1 * clamp(80px, 19vw, 120px));
             }
 
             .saturn {
                 width: clamp(10px, 2.5vw, 18px);
                 height: clamp(10px, 2.5vw, 18px);
-                top: calc(-1 * clamp(95px, 22.5vw, 140px));
-                left: calc(-1 * clamp(5px, 1.25vw, 9px));
+                top: calc(-50% - clamp(5px, 1.25vw, 9px));
+                left: calc(-50%);
+                margin-top: calc(-1 * clamp(95px, 22.5vw, 140px));
             }
 
             .uranus {
                 width: clamp(8px, 2vw, 14px);
                 height: clamp(8px, 2vw, 14px);
-                top: calc(-1 * clamp(110px, 26vw, 160px));
-                left: calc(-1 * clamp(4px, 1vw, 7px));
+                top: calc(-50% - clamp(4px, 1vw, 7px));
+                left: calc(-50%);
+                margin-top: calc(-1 * clamp(110px, 26vw, 160px));
             }
 
             .neptune {
                 width: clamp(7px, 1.8vw, 13px);
                 height: clamp(7px, 1.8vw, 13px);
-                top: calc(-1 * clamp(125px, 30vw, 180px));
-                left: calc(-1 * clamp(3.5px, 0.9vw, 6.5px));
+                top: calc(-50% - clamp(3.5px, 0.9vw, 6.5px));
+                left: calc(-50%);
+                margin-top: calc(-1 * clamp(125px, 30vw, 180px));
             }
 
             .planet:hover {
@@ -1272,14 +1288,14 @@
                 height: 20px;
             }
 
-            .mercury { width: 3px; height: 3px; top: -25px; left: -1.5px; }
-            .venus { width: 4px; height: 4px; top: -32.5px; left: -2px; }
-            .earth { width: 5px; height: 5px; top: -40px; left: -2.5px; }
-            .mars { width: 4px; height: 4px; top: -47.5px; left: -2px; }
-            .jupiter { width: 8px; height: 8px; top: -57.5px; left: -4px; }
-            .saturn { width: 7px; height: 7px; top: -67.5px; left: -3.5px; }
-            .uranus { width: 6px; height: 6px; top: -77.5px; left: -3px; }
-            .neptune { width: 5px; height: 5px; top: -87.5px; left: -2.5px; }
+            .mercury { width: 3px; height: 3px; top: -50%; left: -50%; margin-top: -25px; }
+            .venus { width: 4px; height: 4px; top: -50%; left: -50%; margin-top: -32.5px; }
+            .earth { width: 5px; height: 5px; top: -50%; left: -50%; margin-top: -40px; }
+            .mars { width: 4px; height: 4px; top: -50%; left: -50%; margin-top: -47.5px; }
+            .jupiter { width: 8px; height: 8px; top: -50%; left: -50%; margin-top: -57.5px; }
+            .saturn { width: 7px; height: 7px; top: -50%; left: -50%; margin-top: -67.5px; }
+            .uranus { width: 6px; height: 6px; top: -50%; left: -50%; margin-top: -77.5px; }
+            .neptune { width: 5px; height: 5px; top: -50%; left: -50%; margin-top: -87.5px; }
 
             .planet-cards-grid {
                 grid-template-columns: 1fr;
@@ -2083,12 +2099,14 @@
             console.log('✓ Better touch interactions');
         });
 
-        // Prevent iOS safari bounce effect
+        // Allow scrolling but prevent iOS safari bounce effect only for body
         document.addEventListener('touchmove', function(e) {
-            if (e.target.closest('.modal-content')) {
+            if (e.target.closest('.modal-content') || e.target.closest('.page-section')) {
                 return;
             }
-            e.preventDefault();
+            if (e.target === document.body) {
+                e.preventDefault();
+            }
         }, { passive: false });
 
         // Handle orientation changes
@@ -2101,4 +2119,3 @@
     </script>
 </body>
 </html>
-
