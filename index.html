@@ -38,7 +38,7 @@
             position: relative;
         }
 
-        /* Fix for mobile background */
+        /* background */
         @media (max-width: 768px) {
             body {
                 background: var(--cosmic-black);
@@ -50,7 +50,7 @@
             }
         }
 
-        /* Navigation Styles */
+        /* navigation */
         .navbar {
             position: fixed;
             top: 0;
@@ -144,7 +144,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Interactive Starfield Background */
+        /* star background */
         #starfield {
             position: fixed;
             top: 0;
@@ -183,7 +183,7 @@
             100% { opacity: 1; transform: scale(1.2); }
         }
 
-        /* Page Sections */
+        /* section */
         .page-section {
             display: none;
             min-height: 100vh;
@@ -202,7 +202,7 @@
             z-index: 1;
         }
 
-        /* Home Page Styles */
+        /* home page */
         .hero-section {
             min-height: 90vh;
             display: flex;
@@ -322,7 +322,7 @@
             margin-bottom: 15px;
         }
 
-        /* Enhanced Explore Page Styles with Better Mobile Orbits */
+        /* explore page */
         .solar-system-container {
             position: relative;
             width: 100%;
@@ -351,7 +351,7 @@
             height: min(90vw, 800px);
         }
 
-        /* Enhanced Sun */
+        /* sun */
         .sun {
             position: absolute;
             top: 50%;
@@ -409,7 +409,7 @@
             transform: translate(-50%, -50%);
         }
 
-        /* Planets with enhanced visuals */
+        /* visual planet */
         .planet {
             position: absolute;
             border-radius: 50%;
@@ -434,7 +434,7 @@
             box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
         }
 
-        /* Enhanced Planet orbit definitions - Desktop */
+        /* planet dekstop */
         .mercury-orbit { 
             width: clamp(100px, 20vw, 160px); 
             height: clamp(100px, 20vw, 160px); 
@@ -468,7 +468,7 @@
             height: clamp(420px, 75vw, 720px); 
         }
 
-        /* Animation for orbit containers */
+        /* animation orbit */
         .mercury-container { animation: orbit-mercury 13s linear infinite; }
         .venus-container { animation: orbit-venus 18s linear infinite; }
         .earth-container { animation: orbit-earth 25s linear infinite; }
@@ -478,7 +478,7 @@
         .uranus-container { animation: orbit-uranus 100s linear infinite; }
         .neptune-container { animation: orbit-neptune 115s linear infinite; }
 
-        /* Enhanced Planet size definitions - Properly aligned on orbit paths */
+        /* planet size */
         .mercury {
             width: clamp(6px, 1.5vw, 12px);
             height: clamp(6px, 1.5vw, 12px);
@@ -552,7 +552,7 @@
         @keyframes orbit-uranus { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
         @keyframes orbit-neptune { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
 
-        /* Enhanced Planet Cards Grid */
+        /* cards */
         .planet-cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -623,7 +623,7 @@
             z-index: 1;
         }
 
-        /* Planet Visual in Cards using Images */
+        /* visual img planet */
         .planet-visual {
             width: 80px;
             height: 80px;
@@ -643,7 +643,7 @@
             border-radius: 50%;
         }
 
-        /* Special effect for sun in cards */
+        /* sun effect */
         .planet-visual.sun-card { 
             box-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 10px 30px rgba(0,0,0,0.6);
         }
@@ -761,7 +761,7 @@
             box-shadow: 0 8px 25px rgba(255,215,0,0.4);
         }
 
-        /* Information Page Styles */
+        /* information page */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -797,7 +797,7 @@
             line-height: 1.6;
         }
 
-        /* Enhanced About Us Styles */
+        /* about page */
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -944,7 +944,7 @@
             line-height: 1.6;
         }
 
-        /* Planet Info Modal */
+        /* modal */
         .modal {
             display: none;
             position: fixed;
@@ -1055,7 +1055,7 @@
             color: var(--text-secondary);
         }
 
-        /* Mobile Responsive Enhancements */
+        /* mobile */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
@@ -1127,7 +1127,7 @@
                 gap: 10px;
             }
 
-            /* Enhanced mobile orbit visibility */
+            /* mobile orbit */
             .solar-system-container {
                 height: clamp(400px, 80vw, 600px);
                 margin: 40px 0;
@@ -1143,7 +1143,7 @@
                 border-color: rgba(255, 215, 0, 0.7);
             }
 
-            /* Mobile orbit sizes - more visible */
+            /* mobile os */
             .mercury-orbit { 
                 width: clamp(70px, 18vw, 100px); 
                 height: clamp(70px, 18vw, 100px); 
@@ -1182,82 +1182,98 @@
                 height: clamp(25px, 6vw, 40px);
             }
 
-            /* Mobile planet sizes - properly aligned on orbit paths */
-            .mercury {
-                width: clamp(4px, 1.2vw, 8px);
-                height: clamp(4px, 1.2vw, 8px);
-                top: calc(-50% - clamp(2px, 0.6vw, 4px));
-                left: calc(-50%);
-                margin-top: calc(-1 * clamp(35px, 9vw, 50px));
-            }
+            /* mobile ps */
+             .mercury {
+            width: clamp(10px, 3vw, 12px);
+            height: clamp(10px, 3vw, 12px);
+            top: calc(-50% - clamp(5px, 1.5vw, 6px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(35px, 9vw, 50px));
+            border: 2px solid rgba(255, 215, 0, 0.8);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+        }
 
-            .venus {
-                width: clamp(5px, 1.4vw, 10px);
-                height: clamp(5px, 1.4vw, 10px);
-                top: calc(-50% - clamp(2.5px, 0.7vw, 5px));
-                left: calc(-50%);
-                margin-top: calc(-1 * clamp(45px, 11vw, 65px));
-            }
+        .venus {
+            width: clamp(12px, 3.5vw, 16px);
+            height: clamp(12px, 3.5vw, 16px);
+            top: calc(-50% - clamp(6px, 1.75vw, 8px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(45px, 11vw, 65px));
+            border: 2px solid rgba(255, 140, 0, 0.8);
+            box-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
+        }
 
-            .earth {
-                width: clamp(6px, 1.6vw, 12px);
-                height: clamp(6px, 1.6vw, 12px);
-                top: calc(-50% - clamp(3px, 0.8vw, 6px));
-                left: calc(-50%);
-                margin-top: calc(-1 * clamp(55px, 13vw, 80px));
-            }
+        .earth {
+            width: clamp(14px, 4vw, 18px);
+            height: clamp(14px, 4vw, 18px);
+            top: calc(-50% - clamp(7px, 2vw, 9px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(55px, 13vw, 80px));
+            border: 2px solid rgba(135, 206, 235, 0.8);
+            box-shadow: 0 0 12px rgba(135, 206, 235, 0.6);
+        }
 
-            .mars {
-                width: clamp(5px, 1.3vw, 10px);
-                height: clamp(5px, 1.3vw, 10px);
-                top: calc(-50% - clamp(2.5px, 0.65vw, 5px));
-                left: calc(-50%);
-                margin-top: calc(-1 * clamp(65px, 15vw, 95px));
-            }
+        .mars {
+            width: clamp(12px, 3.2vw, 14px);
+            height: clamp(12px, 3.2vw, 14px);
+            top: calc(-50% - clamp(6px, 1.6vw, 7px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(65px, 15vw, 95px));
+            border: 2px solid rgba(205, 92, 92, 0.8);
+            box-shadow: 0 0 10px rgba(205, 92, 92, 0.6);
+        }
 
-            .jupiter {
-                width: clamp(12px, 3vw, 20px);
-                height: clamp(12px, 3vw, 20px);
-                top: calc(-50% - clamp(6px, 1.5vw, 10px));
-                left: calc(-50%);
-                margin-top: calc(-1 * clamp(80px, 19vw, 120px));
-            }
+        .jupiter {
+            width: clamp(20px, 6vw, 28px);
+            height: clamp(20px, 6vw, 28px);
+            top: calc(-50% - clamp(10px, 3vw, 14px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(80px, 19vw, 120px));
+            border: 2px solid rgba(255, 165, 0, 0.8);
+            box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+        }
 
-            .saturn {
-                width: clamp(10px, 2.5vw, 18px);
-                height: clamp(10px, 2.5vw, 18px);
-                top: calc(-50% - clamp(5px, 1.25vw, 9px));
-                left: calc(-50%);
-                margin-top: calc(-1 * clamp(95px, 22.5vw, 140px));
-            }
+        .saturn {
+            width: clamp(18px, 5.5vw, 24px);
+            height: clamp(18px, 5.5vw, 24px);
+            top: calc(-50% - clamp(9px, 2.75vw, 12px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(95px, 22.5vw, 140px));
+            border: 2px solid rgba(244, 228, 188, 0.8);
+            box-shadow: 0 0 15px rgba(244, 228, 188, 0.6);
+        }
 
-            .uranus {
-                width: clamp(8px, 2vw, 14px);
-                height: clamp(8px, 2vw, 14px);
-                top: calc(-50% - clamp(4px, 1vw, 7px));
-                left: calc(-50%);
-                margin-top: calc(-1 * clamp(110px, 26vw, 160px));
-            }
+        .uranus {
+            width: clamp(16px, 4.5vw, 20px);
+            height: clamp(16px, 4.5vw, 20px);
+            top: calc(-50% - clamp(8px, 2.25vw, 10px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(110px, 26vw, 160px));
+            border: 2px solid rgba(64, 224, 208, 0.8);
+            box-shadow: 0 0 12px rgba(64, 224, 208, 0.6);
+        }
 
-            .neptune {
-                width: clamp(7px, 1.8vw, 13px);
-                height: clamp(7px, 1.8vw, 13px);
-                top: calc(-50% - clamp(3.5px, 0.9vw, 6.5px));
-                left: calc(-50%);
-                margin-top: calc(-1 * clamp(125px, 30vw, 180px));
-            }
+        .neptune {
+            width: clamp(15px, 4.2vw, 18px);
+            height: clamp(15px, 4.2vw, 18px);
+            top: calc(-50% - clamp(7.5px, 2.1vw, 9px));
+            left: calc(-50%);
+            margin-top: calc(-1 * clamp(125px, 30vw, 180px));
+            border: 2px solid rgba(30, 144, 255, 0.8);
+            box-shadow: 0 0 12px rgba(30, 144, 255, 0.6);
+        }
 
             .planet:hover {
                 transform: scale(2);
             }
 
-            /* Better mobile background */
+            /* mbbackground */
             .hero-content h1 {
                 letter-spacing: 2px;
             }
         }
 
-        /* Ultra small mobile devices */
+        /* mdevice */
         @media (max-width: 480px) {
             .solar-system-container {
                 height: clamp(300px, 70vw, 400px);
@@ -1314,7 +1330,7 @@
             }
         }
 
-        /* Loading Animation */
+        /* load anim */
         .page-transition {
             opacity: 0;
             transform: translateY(20px);
@@ -1326,7 +1342,7 @@
             transform: translateY(0);
         }
 
-        /* Scroll Reveal Animation */
+        /* scroll rev */
         .scroll-reveal {
             opacity: 0;
             transform: translateY(50px);
@@ -1338,7 +1354,7 @@
             transform: translateY(0);
         }
 
-        /* Enhanced orbital motion indicators */
+        /* orbital */
         .orbit-indicator {
             position: absolute;
             width: 4px;
@@ -1348,7 +1364,7 @@
             box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
         }
 
-        /* Responsive text scaling */
+        /* scaling txt */
         @media (max-width: 1024px) {
             .section-header h2 {
                 font-size: clamp(2rem, 5vw, 3rem);
@@ -1359,7 +1375,7 @@
             }
         }
 
-        /* Enhanced mobile touch interactions */
+        /* tmobile */
         @media (hover: none) and (pointer: coarse) {
             .planet-card:hover .planet-description,
             .planet-card:hover .explore-btn {
@@ -1396,7 +1412,7 @@
         </div>
     </nav>
 
-    <!-- Interactive Starfield Background -->
+    <!-- Star Background -->
     <div id="starfield"></div>
 
     <!-- Home Page -->
@@ -1509,14 +1525,14 @@
                 </div>
             </div>
 
-            <!-- Enhanced Planet Information Cards -->
+            <!-- Information Cards -->
             <div class="section-header scroll-reveal">
                 <h2>Informasi Detail Planet</h2>
                 <p>Pemahaman karakteristik unik setiap planet dalam Solar system kita. Click salah satu kartu untuk melihat detail lengkap.</p>
             </div>
 
             <div class="planet-cards-grid scroll-reveal" id="planetCardsGrid">
-                <!-- Planet cards will be generated dynamically -->
+                <!-- Planet cards akan dihasilkan -->
             </div>
         </div>
     </section>
@@ -1612,7 +1628,7 @@
         </div>
     </section>
 
-    <!-- Planet Info Modal -->
+    <!-- planet modal -->
     <div class="modal" id="planetModal">
         <div class="modal-content">
             <button class="close-btn" onclick="closePlanetModal()">&times;</button>
@@ -1621,7 +1637,7 @@
                 <div class="modal-classification" id="modalClassification">Classification</div>
             </div>
             <div class="stats-modal" id="modalStats">
-                <!-- Stats will be populated here -->
+                <!-- stats app -->
             </div>
             <div class="fact-section">
                 <h4>Fakta Menarik ✰</h4>
@@ -1631,7 +1647,7 @@
     </div>
 
     <script>
-        // Celestial Bodies Data
+        // cb data
         const celestialBodies = {
             sun: {
                 name: "Matahari",
@@ -1761,32 +1777,32 @@
             }
         };
 
-        // Navigation System
+        // nav system
         let currentPage = 'home';
 
         function showPage(pageName) {
-            // Hide all pages
+            // hide all page
             document.querySelectorAll('.page-section').forEach(page => {
                 page.classList.remove('active');
             });
             
-            // Show selected page
+            // selected page
             document.getElementById(pageName).classList.add('active');
             
-            // Update navigation
+            // update nav
             document.querySelectorAll('.nav-item').forEach(item => {
                 item.classList.remove('active');
             });
             document.querySelector(`[data-page="${pageName}"]`).classList.add('active');
             
-            // Close mobile menu if open
+            // close mb if menu
             document.getElementById('navMenu').classList.remove('active');
             document.getElementById('mobileToggle').classList.remove('active');
             
-            // Update current page
+            // updt crrnt page
             currentPage = pageName;
             
-            // Initialize planet cards if on explore page
+            // planet cards app
             if (pageName === 'explore') {
                 createPlanetCards();
                 setTimeout(() => {
@@ -1797,7 +1813,7 @@
                 }, 500);
             }
             
-            // Add page transition animation
+            // page trans anim
             setTimeout(() => {
                 document.querySelectorAll(`#${pageName} .page-transition`).forEach((element, index) => {
                     setTimeout(() => {
@@ -1806,7 +1822,7 @@
                 });
             }, 50);
             
-            // Scroll to top
+            // sc t top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -1855,7 +1871,7 @@
             const planet = celestialBodies[planetKey];
             if (!planet) return;
 
-            // Show modal with planet info
+            // modal planet info
             document.getElementById('modalTitle').textContent = planet.name;
             document.getElementById('modalClassification').textContent = planet.classification;
             document.getElementById('modalFacts').textContent = planet.fact;
@@ -1880,7 +1896,7 @@
             document.getElementById('planetModal').style.display = 'none';
         }
 
-        // Interactive Starfield
+        // starfield
         class InteractiveStarfield {
             constructor() {
                 this.container = document.getElementById('starfield');
@@ -1922,7 +1938,7 @@
             }
 
             bindEvents() {
-                // Mouse events
+                // mouse event
                 this.container.addEventListener('mousedown', (e) => {
                     if (e.target.classList.contains('star')) {
                         this.startDrag(e.target, e.clientX, e.clientY);
@@ -1939,7 +1955,7 @@
                     this.stopDrag();
                 });
 
-                // Touch events for mobile
+                // touch event
                 this.container.addEventListener('touchstart', (e) => {
                     if (e.target.classList.contains('star')) {
                         e.preventDefault();
@@ -1997,7 +2013,7 @@
             }
         }
 
-        // Scroll Reveal Animation
+        // scroll rv anim
         function revealOnScroll() {
             const reveals = document.querySelectorAll('.scroll-reveal');
             
@@ -2012,12 +2028,12 @@
             });
         }
 
-        // Initialize everything
+        // in all
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize starfield
+            // in starfield
             new InteractiveStarfield();
             
-            // Navigation event listeners
+            // nav event listen
             document.querySelectorAll('.nav-item').forEach(item => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -2026,7 +2042,7 @@
                 });
             });
 
-            // Mobile toggle
+            // mobile togg
             document.getElementById('mobileToggle').addEventListener('click', () => {
                 const navMenu = document.getElementById('navMenu');
                 const toggle = document.getElementById('mobileToggle');
@@ -2035,7 +2051,7 @@
                 toggle.classList.toggle('active');
             });
 
-            // Navbar scroll effect
+            // navbar sc effect
             window.addEventListener('scroll', () => {
                 const navbar = document.getElementById('navbar');
                 if (window.scrollY > 50) {
@@ -2044,18 +2060,18 @@
                     navbar.classList.remove('scrolled');
                 }
                 
-                // Reveal animation on scroll
+                // rev anim sc
                 revealOnScroll();
             });
 
-            // Close modal when clicking outside
+            // close
             document.getElementById('planetModal').addEventListener('click', (e) => {
                 if (e.target.id === 'planetModal') {
                     closePlanetModal();
                 }
             });
 
-            // Keyboard shortcuts
+            // keyboard short
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     closePlanetModal();
@@ -2070,7 +2086,7 @@
                 }
             });
 
-            // Initialize home page animations
+            // hm pg anim
             setTimeout(() => {
                 document.querySelectorAll('#home .page-transition').forEach((element, index) => {
                     setTimeout(() => {
@@ -2079,10 +2095,10 @@
                 });
             }, 100);
 
-            // Initial scroll reveal check
+            // sc rev check
             revealOnScroll();
 
-            // Prevent zoom on double tap for mobile
+            // dbc zoom mb
             let lastTouchEnd = 0;
             document.addEventListener('touchend', function (event) {
                 const now = (new Date()).getTime();
@@ -2099,7 +2115,7 @@
             console.log('✓ Better touch interactions');
         });
 
-        // Allow scrolling but prevent iOS safari bounce effect only for body
+        // ios mb
         document.addEventListener('touchmove', function(e) {
             if (e.target.closest('.modal-content') || e.target.closest('.page-section')) {
                 return;
@@ -2109,13 +2125,14 @@
             }
         }, { passive: false });
 
-        // Handle orientation changes
+        // handle or change
         window.addEventListener('orientationchange', function() {
             setTimeout(() => {
-                // Recalculate sizes after orientation change
+                // recalculate 
                 const starfield = new InteractiveStarfield();
             }, 500);
         });
     </script>
 </body>
 </html>
+
